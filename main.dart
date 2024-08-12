@@ -1,4 +1,3 @@
 void main() {
-  String name = 'baek';
-  var name = 'baek';
+  dynamic name = 'baek';
 }

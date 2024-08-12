@@ -1,3 +1,3 @@
 void main() {
-  late final name = 'baek';
+  const max_allowed_price = 120;
 }

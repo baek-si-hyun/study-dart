@@ -1,7 +1,7 @@
 void main() {
-  String name = 'baek';
-  baek = null;
-  if (baek != null) {
-    baek.isNotEmpty;
+  String? name = 'baek';
+  name = null;
+  if (name != null) {
+    name.isNotEmpty;
   }
 }

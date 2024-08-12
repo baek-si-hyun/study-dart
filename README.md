@@ -28,3 +28,11 @@
 
 - final로 변수를 만들게 되면 이 변수는 수정할 수 없게 된다.
 - javascript의 const와 유사하다.
+
+## Late Variables
+ 
+  late final String name;
+
+- late는 초기화 없이 변수를 선언만 하고 추후에 변수에 값을 할당할 때 사용한다.
+
+

@@ -1,3 +1,7 @@
 void main() {
-  dynamic name = 'baek';
+  String name = 'baek';
+  baek = null;
+  if (baek != null) {
+    baek.isNotEmpty;
+  }
 }

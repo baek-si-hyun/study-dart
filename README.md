@@ -14,3 +14,8 @@
 - 변수를 선언할 때 dynamic을 사용하거나 값을 지정하지 않으면 dynamic 타입을 가진다.
 
 ## Null Safety
+
+  String? name = 'baek';
+
+- 개발자가 null 값을 참조할 수 없도록 하는 것이다.
+- 타입 뒤에 ?를 붙여줌으로써 name이 타입 또는 null이 될 수 있다고 명시해준다.

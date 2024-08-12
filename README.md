@@ -26,5 +26,5 @@
 
   final name = 'baek';
 
-- final 타입으로 변수를 만들게 되면 이 변수는 수정할 수 없게 된다.
+- final로 변수를 만들게 되면 이 변수는 수정할 수 없게 된다.
 - javascript의 const와 유사하다.

@@ -69,3 +69,11 @@
       ];
 
 - List 요소에 if문을 사용할 수 있다.
+
+## String Interpolation
+
+      var greeting = "hello $name, I'm ${age + 5}";
+
+- $ 기호를 붙이고 사용할 변수를 뒤에 적어주면 된다.
+- 연산이 필요한 경우에는 ${}안에서 적어주면 된다.
+- javascript와 굉장히 비슷하다

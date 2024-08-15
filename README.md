@@ -105,3 +105,15 @@
 
 - Set에 속한 모든 요소들은 고유해야한다.
 - 중복이 피룡하다면 List를 사용하면 된다.
+
+## Defining a Function
+
+      String sayHello(String name){
+         return "hello $name nice to meet you";
+      }
+
+      String sayHello(String potato) => "hello $potato nice to meet you";
+
+- [리턴타입] [함수명](매개변수 타입, 매개변수){ [함수 실행 문장];} 으로 구성되어 있다.
+- Dart는 진정한 객체 지향 언어이므로 함수도 객체이며 타입이 Function이다.
+- 하나의 표현식만 포함하는 경우 두번쨰 예제와 같이 사용하여 단축 시킬 수 있다.

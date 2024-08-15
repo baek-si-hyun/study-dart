@@ -131,4 +131,13 @@
 - Named Parameters는 파라미터가 여러개일 경우 개발자의 실수를 방지하기 위해 사용된다.
 - 파라미터의 기본값을 적용할 수 있다.
 - required를 사용하게 되면 해당 파라미터는 반드시 전달받아야 한다.
- 
+
+## Optional Positional Parameters
+
+      String sayHello(String name, int age, [String? country = ""]) {
+         return 'Hello ${name}, You are ${age} from the \${country}';
+      }
+
+
+- Dart에서 []는 Optional Positional Parameters를 명시 할때 사용된다.
+- Optional Positional Parameters를 사용하게 되면 해닫 파라미터를 필수로 사용하지 않아도 된다.

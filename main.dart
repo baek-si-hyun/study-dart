@@ -1,8 +1,8 @@
-String sayHello(
-    {required String name, required int age, required String country}) {
-  return "${name} / ${age} / ${country}";
+String sayHello(String name, int age, [String? country = ""]) {
+  return 'Hello ${name}, You are ${age} from the ${country}';
 }
 
 void main() {
-  print(sayHello(name: "sugar", age: 10, country: "Korea"));
+  var result = sayHello("baek", 10);
+  print(result);
 }

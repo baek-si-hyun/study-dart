@@ -1,8 +1,11 @@
-String sayHello(String name, int age, [String? country = ""]) {
-  return 'Hello ${name}, You are ${age} from the ${country}';
+String capitalizeName(String? name) {
+  return name?.toUpperCase() ?? "";
 }
 
 void main() {
-  var result = sayHello("baek", 10);
-  print(result);
+  String? name;
+  name ??= "sugar";
+  name = null;
+  name ??= "js";
+  print(name); // js
 }

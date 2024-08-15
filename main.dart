@@ -1,10 +1,6 @@
 void main() {
-  var oldFriends = ["nico", "lynn"];
-  var newFriends = [
-    "tom",
-    "jon",
-    for (var friend in oldFriends) "❤️ $friend"
+  List<Map<String, Object>> players = [
+    {'name': 'baek', 'xp': 199993.999},
+    {'name': 'baek', 'xp': 199993.999},
   ];
-
-  print(newFriends); // [tom, jon, ❤️ nico, ❤️ lynn]
 }

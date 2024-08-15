@@ -59,7 +59,7 @@
 
 - List는 collection if 와 collection for를 지원한다.
 
-## Collection If 
+## Collection If
 
       var item = [
          1,
@@ -74,8 +74,8 @@
 
       var greeting = "hello $name, I'm ${age + 5}";
 
-- $ 기호를 붙이고 사용할 변수를 뒤에 적어주면 된다.
-- 연산이 필요한 경우에는 ${}안에서 적어주면 된다.
+- \$ 기호를 붙이고 사용할 변수를 뒤에 적어주면 된다.
+- 연산이 필요한 경우에는 \${}안에서 적어주면 된다.
 - javascript와 굉장히 비슷하다
 
 ## Collection For
@@ -87,3 +87,14 @@
       ];
 
 - List 요소에 for문을 사용할 수 있다.
+
+## Maps
+
+      List<Map<String, Object>> players = [
+         {'name': 'baek', 'xp': 199993.999},
+         {'name': 'park', 'xp': 123123.999},
+      ];
+
+- Map은 key와 value를 연결하는 객체이다.
+- 키와 값 구조이면 모든지 가는으하다.
+- 키는 고유해야한다.

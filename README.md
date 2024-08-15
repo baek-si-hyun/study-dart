@@ -108,12 +108,27 @@
 
 ## Defining a Function
 
-      String sayHello(String name){
+      - String sayHello(String name){
          return "hello $name nice to meet you";
-      }
+        }
 
-      String sayHello(String potato) => "hello $potato nice to meet you";
+      - String sayHello(String potato) => "hello $potato nice to meet you";
 
-- [리턴타입] [함수명](매개변수 타입, 매개변수){ [함수 실행 문장];} 으로 구성되어 있다.
+- [리턴타입][함수명](매개변수 타입, 매개변수){ [함수 실행 문장];} 으로 구성되어 있다.
 - Dart는 진정한 객체 지향 언어이므로 함수도 객체이며 타입이 Function이다.
 - 하나의 표현식만 포함하는 경우 두번쨰 예제와 같이 사용하여 단축 시킬 수 있다.
+
+## Named Parameters
+
+      String sayHello({required String name, required int age, required String country}) {
+         return "${name} / ${age} / \${country}";
+      }
+
+      void main() {
+         print(sayHello(name: "sugar", age: 10, country: "Korea"));
+      }
+
+- Named Parameters는 파라미터가 여러개일 경우 개발자의 실수를 방지하기 위해 사용된다.
+- 파라미터의 기본값을 적용할 수 있다.
+- required를 사용하게 되면 해당 파라미터는 반드시 전달받아야 한다.
+ 

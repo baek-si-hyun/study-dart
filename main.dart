@@ -1,6 +1,8 @@
-String sayHello(String potato) => "hello $potato nice to meet you";
+String sayHello(
+    {required String name, required int age, required String country}) {
+  return "${name} / ${age} / ${country}";
+}
 
-num plus(num a, num b) => a + b;
 void main() {
-  print(sayHello('baek'));
+  print(sayHello(name: "sugar", age: 10, country: "Korea"));
 }

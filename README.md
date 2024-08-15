@@ -96,5 +96,12 @@
       ];
 
 - Map은 key와 value를 연결하는 객체이다.
-- 키와 값 구조이면 모든지 가는으하다.
+- 키와 값 구조이면 모든지 가능하다.
 - 키는 고유해야한다.
+
+## Sets
+
+      var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
+
+- Set에 속한 모든 요소들은 고유해야한다.
+- 중복이 피룡하다면 List를 사용하면 된다.

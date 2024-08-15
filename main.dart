@@ -1,6 +1,7 @@
 void main() {
-  List<Map<String, Object>> players = [
-    {'name': 'baek', 'xp': 199993.999},
-    {'name': 'baek', 'xp': 199993.999},
-  ];
+  var numbers = {1, 2, 3, 4};
+  numbers.add(1);
+  numbers.add(1);
+  numbers.add(1);
+  print(numbers);
 }

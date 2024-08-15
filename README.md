@@ -51,3 +51,21 @@
 ## ❓compile-time constant 란?
 
       컴파일 시점에서 값을 확정하고 변경할 수 없는 값을 의미한다.
+
+## List
+
+      - List<int> numbers = [1, 2, 3];
+      - var number2 = [4, 5, 6];
+
+- List는 collection if 와 collection for를 지원한다.
+
+## collection if 
+
+      var item = [
+         1,
+         2,
+         3,
+         if (giveMeFive) 10,
+      ];
+
+- List 요소에 if문을 사용할 수 있다.

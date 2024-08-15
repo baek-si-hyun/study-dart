@@ -1,8 +1,10 @@
 void main() {
-  String name = "tom";
-  bool isPlay = true;
-  int age = 10;
-  double money = 52.55;
-  num x = 12;
-  num y = 1.2;
+  var giveMeFive = true;
+  var item = [
+    1,
+    2,
+    3,
+    if (giveMeFive) 10, // giveMeFive가 true이면 10을 넣음
+  ];
+  print(item);
 }

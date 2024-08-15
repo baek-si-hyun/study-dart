@@ -59,7 +59,7 @@
 
 - List는 collection if 와 collection for를 지원한다.
 
-## collection if 
+## Collection If 
 
       var item = [
          1,
@@ -77,3 +77,13 @@
 - $ 기호를 붙이고 사용할 변수를 뒤에 적어주면 된다.
 - 연산이 필요한 경우에는 ${}안에서 적어주면 된다.
 - javascript와 굉장히 비슷하다
+
+## Collection For
+
+      var newFriends = [
+         "tom",
+         "jon",
+         for (var friend in oldFriends) "❤️ $friend"
+      ];
+
+- List 요소에 for문을 사용할 수 있다.

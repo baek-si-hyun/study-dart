@@ -1,5 +1,10 @@
-void main(){
-var name = "tom";
-var age = 10;
-var greeting = "hello $name, I'm ${age + 5}";
+void main() {
+  var oldFriends = ["nico", "lynn"];
+  var newFriends = [
+    "tom",
+    "jon",
+    for (var friend in oldFriends) "❤️ $friend"
+  ];
+
+  print(newFriends); // [tom, jon, ❤️ nico, ❤️ lynn]
 }

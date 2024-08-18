@@ -1,11 +1,30 @@
 class Player {
   final String name;
-  final int xp;
-  // name은 null일수 없다는 에러가 발생한다.
-  // Player({this.name, this.xp});
+  int xp, age;
+  String team;
 
-  // required를 사용해서 에러를 해결할 수 있다.
-  Player({required this.name, required this.xp});
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  });
+
+  Player.createRedPlayer({
+    required String name,
+    required int age,
+  })  : this.age = age,
+        this.name = name,
+        this.team = 'red',
+        this.xp = 0;
+
+  // 간소화
+  Player.createBluePlayer({
+    required this.name,
+    required this.age,
+    this.team = 'blue',
+    this.xp = 0,
+  });
 
   void sayHello() {
     print('Hi my name is $name');
@@ -13,7 +32,23 @@ class Player {
 }
 
 void main() {
-  // 너무 많은 인자를 받게 될 경우 각 인자가 의미하는 바가 무엇인지 알기 어려울때 사용한다.
-  var player = Player(name: "baek", xp: 1500);
+  var player = Player(
+    name: "baek",
+    xp: 1500,
+    team: 'red',
+    age: 10,
+  );
   player.sayHello();
+
+  var player2 = Player.createRedPlayer(
+    name: "bae",
+    age: 10,
+  );
+  player2.sayHello();
+
+  var player3 = Player.createBluePlayer(
+    name: "park",
+    age: 20,
+  );
+  player3.sayHello();
 }

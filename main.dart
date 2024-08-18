@@ -1,11 +1,6 @@
-String capitalizeName(String? name) {
-  return name?.toUpperCase() ?? "";
-}
+typedef ListOfInts = List;
 
-void main() {
-  String? name;
-  name ??= "sugar";
-  name = null;
-  name ??= "js";
-  print(name); // js
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversedList = list.reversed.toList();
+  return reversedList;
 }

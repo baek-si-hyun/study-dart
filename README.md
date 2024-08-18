@@ -138,7 +138,6 @@
          return 'Hello ${name}, You are ${age} from the \${country}';
       }
 
-
 - Dart에서 []는 Optional Positional Parameters를 명시 할때 사용된다.
 - Optional Positional Parameters를 사용하게 되면 해닫 파라미터를 필수로 사용하지 않아도 된다.
 
@@ -160,9 +159,64 @@
 
 - ??= 연산자를 사용하면 변수 안에 값이 null일 때를 체크해서 값을 할당해줄 수 있다.
 
-
 ## TypeDef
 
       typedef ListOfInts = List;
 
 - 자료형에 개발자가 원하는 alias를 붙일수 있게 해준다.
+
+## Class
+
+      class Player {
+            // 필드
+            final String name = 'baek';
+            final int age = 10;
+
+            // 메서드
+            void sayName() {
+                  print("Hi my name is \$name");
+            }
+      }
+
+      void main() {
+            // 객체
+            var player = Player();
+      }
+
+- 메서드 내부에서 this를 사용하여 필드에 접근할 수 있지만 공식적으로 비추천한다.
+- 필드를 선언할 때 반드시 타입을 명시 해야한다.
+- final대신 const를 사용할 수 없다.
+
+## 어려울수 있는 개념
+
+1. const와 final의 차이점
+
+- const는 컴파일 단계에서 메모리에 할당된다.
+- final은 런타임 단계에서 메모리에 할당된다.
+
+2. const를 필드에서 사용할 수 없는 이유
+
+- 필드는 클래스의 객체가 생성될 경우 초기화 된다. 하지만 const는 객체가 생성되기도 전에 메모리에 올라가야 함으로 사용할 수 없다.
+
+3. class 내부에서 const를 사용하고 싶다면
+- static을 앞에 붙여주면 가능하다.
+- static은 클래스에 귀속 시켜주는 역할을 해준다.
+
+4. 참고자료
+      class Player {
+            static const String species = 'human';  // 컴파일 타임 상수
+            static String planet = 'Earth';         // 런타임에 변경 가능
+            final String name;                      // 인스턴스가 생성될 때 결정
+            String job = 'Housekeeper';             // 런타임에 변경 가능
+
+            Player(this.name);
+      }
+
+      void main() {
+            print(Player.species);  // 출력: human
+            print(Player.planet);   // 출력: Earth
+
+            var player = Player('John');
+            print(player.name);     // 출력: John
+            print(player.job);      // 출력: Housekeeper
+      }

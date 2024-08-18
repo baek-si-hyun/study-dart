@@ -220,3 +220,29 @@
             print(player.name);     // 출력: John
             print(player.job);      // 출력: Housekeeper
       }
+
+
+## Constructors
+
+      class Player {
+            final String name;
+            final int xp;
+
+            // 생성자
+            Player(this.name, this.xp);
+
+            void sayHello() {
+                  print('Hi my name is $name');
+            }
+      }
+
+
+      void main() {
+            // 생성자 호출
+            var player = Player("baek", 1500);
+            player.sayHello();
+
+      }
+
+- 생성자는 클래스와 이름이 같아야한다.
+

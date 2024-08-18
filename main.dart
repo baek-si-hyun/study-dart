@@ -1,13 +1,18 @@
 class Player {
-  final String name = 'baek';
-  final int age = 10;
-  void sayName() {
-    // class method안에서는 this를 쓰지 않는 것을 권장한다.
-    print("Hi my name is $name");
+  final String name;
+  final int xp;
+  // 클래스 이름과 같아야한다!
+  Player(this.name, this.xp);
+
+  void sayHello() {
+    print('Hi my name is $name');
   }
 }
 
 void main() {
-  // new를 꼭 붙이지 않아도 된다.
-  var player = Player();
+  // Player 클래스의 갹체
+  var player = Player("baek", 1500);
+  player.sayHello();
+  var player2 = Player("bae", 2500);
+  player2.sayHello();
 }

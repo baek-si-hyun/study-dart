@@ -199,28 +199,30 @@
 - 필드는 클래스의 객체가 생성될 경우 초기화 된다. 하지만 const는 객체가 생성되기도 전에 메모리에 올라가야 함으로 사용할 수 없다.
 
 3. class 내부에서 const를 사용하고 싶다면
+
 - static을 앞에 붙여주면 가능하다.
 - static은 클래스에 귀속 시켜주는 역할을 해준다.
 
-4. 참고자료
-      class Player {
-            static const String species = 'human';  // 컴파일 타임 상수
-            static String planet = 'Earth';         // 런타임에 변경 가능
-            final String name;                      // 인스턴스가 생성될 때 결정
-            String job = 'Housekeeper';             // 런타임에 변경 가능
+4.  참고자료
+    class Player {
+    static const String species = 'human'; // 컴파일 타임 상수
+    static String planet = 'Earth'; // 런타임에 변경 가능
+    final String name; // 인스턴스가 생성될 때 결정
+    String job = 'Housekeeper'; // 런타임에 변경 가능
 
             Player(this.name);
-      }
 
-      void main() {
-            print(Player.species);  // 출력: human
-            print(Player.planet);   // 출력: Earth
+    }
+
+    void main() {
+    print(Player.species); // 출력: human
+    print(Player.planet); // 출력: Earth
 
             var player = Player('John');
             print(player.name);     // 출력: John
             print(player.job);      // 출력: Housekeeper
-      }
 
+    }
 
 ## Constructors
 
@@ -246,3 +248,24 @@
 
 - 생성자는 클래스와 이름이 같아야한다.
 
+## Named Constructor Parameters
+
+      class Player {
+            final String name;
+            final int xp;
+
+            Player({required this.name, required this.xp});
+
+            void sayHello() {
+                  print('Hi my name is \$name');
+            }
+      }
+
+      void main() {
+            var player = Player(name: "baek", xp: 1500);
+            player.sayHello();
+      }
+
+
+- 너무 많은 인자를 받게 될 경우 각 인자가 의미하는 바가 무엇인지 알기 어려울 때 각 뜻을 명시하기 위해 많이 사용한다.
+- 생성자에서 'null일수 없다'는 에러가 발생할 경우 required를 사용해서 반드시 전달 받게 만들어주면 해결된다.

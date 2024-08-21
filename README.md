@@ -266,7 +266,6 @@
             player.sayHello();
       }
 
-
 - 너무 많은 인자를 받게 될 경우 각 인자가 의미하는 바가 무엇인지 알기 어려울 때 각 뜻을 명시하기 위해 많이 사용한다.
 - 생성자에서 'null일수 없다'는 에러가 발생할 경우 required를 사용해서 반드시 전달 받게 만들어주면 해결된다.
 
@@ -279,7 +278,7 @@
             this.name = name,
             this.team = 'red',
             this.xp = 0;
-            
+
 
       // 간소화
       Player.createBluePlayer({
@@ -292,3 +291,16 @@
 - 생성자를 여러개 만들고 싶을 떄 사용한다.
 - : 은 객체를 초기화하는 명령어이다.
 - 간소화 방법을 사용하면 :를 사용하지 않아도 된다.
+
+## Cascade Notation
+
+      void main() {
+            var baek = Player(name: "baek", xp: 17, team: "red")
+            ..name = "nico"
+            ..xp = 20
+            ..team = "blue"
+            ..sayHello();
+      }
+
+- ..은 baek 을 가르킨다.
+- 객체 이름을 생략할 수 있다.
